@@ -3,11 +3,11 @@
     <mat-card class="user-card">
         <img mat-card-image src="http://placekitten.com/300/300">
         <mat-card-header class="profile-card-header">
-            <mat-card-title >{{userData.Username}}</mat-card-title>
+            <mat-card-title >{{userData.username}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <p>Email: {{userData.Email}}</p>
-            <p>Birthday: {{userData.Birthday | date:'longDate'}}</p>
+            <p>Email: {{userData.email}}</p>
+            <p>Birthday: {{userData.birthday | date:'longDate'}}</p>
         </mat-card-content>
     </mat-card>
     <mat-card class="edit-userdata-card">
@@ -20,7 +20,7 @@
                 <mat-form-field class="form-inputs">
                     <input
                         matInput
-                        [(ngModel)]="userData.Username"
+                        [(ngModel)]="userData.username"
                         placeholder="Username"
                         type="text"
                         name="Username"
@@ -31,7 +31,7 @@
                 <mat-form-field class="form-inputs">
                     <input
                         matInput
-                        [(ngModel)]="userData.Email"
+                        [(ngModel)]="userData.email"
                         placeholder="Email"
                         type="email"
                         name="Email"
@@ -42,7 +42,7 @@
                 <mat-form-field class="form-inputs">
                     <input
                         matInput
-                        [(ngModel)]="userData.Birthday"
+                        [(ngModel)]="userData.birthday"
                         placeholder="Birthday"
                         type="date"
                         name="Birthday"

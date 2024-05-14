@@ -27,7 +27,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class UserProfileComponent implements OnInit{
 
-  @Input() userData = { Username: "", Email: "", Birthday: "", FavoriteMovies: [] };
+  @Input() userData = { username: "", email: "", birthday: "", FavoriteMovies: [] };
 
   user: any = {};
   movies: any[] = [];
@@ -58,9 +58,9 @@ export class UserProfileComponent implements OnInit{
    */
   getProfile(): void {
     this.user = this.fetchApiData.getUser();
-    this.userData.Username = this.user.Username;
-    this.userData.Email = this.user.Email;
-    this.userData.Birthday = this.user.Birthday;
+    this.userData.username = this.user.Username;
+    this.userData.email = this.user.Email;
+    this.userData.birthday = this.user.Birthday;
     this.fetchApiData.getAllMovies().subscribe((response) => {
       this.FavoriteMovies = response.filter((movie: any) => this.user.FavoriteMovies.includes(movie._id));
     });
@@ -195,7 +195,7 @@ export class UserProfileComponent implements OnInit{
    */
   deleteFavMovies(movie: any): void {
     this.user = this.fetchApiData.getUser();
-    this.userData.Username = this.user.Username;
+    this.userData.username = this.user.username;
     this.fetchApiData.deleteFavouriteMovies(movie).subscribe((result) => {
       localStorage.setItem('user', JSON.stringify(result));
       this.getFavMovies();

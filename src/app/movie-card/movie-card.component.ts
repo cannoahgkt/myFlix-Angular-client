@@ -25,7 +25,7 @@ export class MovieCardComponent implements OnInit {
 
   movies: any[] = [];
   user: any = {};
-  userData = { Username: "", FavoriteMovies: []};
+  userData = { username: "", FavoriteMovies: []};
   FavoriteMovies: any[] = [];
   isFavMovie: boolean = false;
 
@@ -151,7 +151,7 @@ export class MovieCardComponent implements OnInit {
    */
   addFavMovies(movie: any): void {
     this.user = this.fetchApiData.getUser();
-    this.userData.Username = this.user.Username;
+    this.userData.username = this.user.username;
     this.fetchApiData.addFavouriteMovies(movie).subscribe((result) => {
       localStorage.setItem('user', JSON.stringify(result));
       this.getFavMovies(); 
@@ -168,7 +168,7 @@ export class MovieCardComponent implements OnInit {
    */
   deleteFavMovies(movie: any): void {
     this.user = this.fetchApiData.getUser();
-    this.userData.Username = this.user.Username;
+    this.userData.username = this.user.username;
     this.fetchApiData.deleteFavouriteMovies(movie).subscribe((result) => {
       localStorage.setItem('user', JSON.stringify(result));
       this.getFavMovies();
