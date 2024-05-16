@@ -2,26 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
-## Development server
+## Description
+The MyFlixAngularClient serves as the front-end application for the myFlix API, providing an interface for users to interact with movie data, view detailed information about each film, and manage user profiles.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Dependencies
+- **Angular**: A framework for building single-page web applications.
+- **Angular Material**: A UI component library for Angular applications that implements Material Design by Google.
+- **TypeDoc**: A tool for generating HTML documentation from TypeScript code.
 
-## Code scaffolding
+## The API the Project Uses
+This project interacts with the [myFlix API](https://github.com/cannoahgkt/moviesapi), which provides the backend functionality for the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Link to the Application
+You can access the live application hosted on GitHub Pages: [MyFlixAngularClient](https://cannoahgkt.github.io/myFlix-Angular-client/).
 
-## Build
+## Views
+### Welcome View
+- Users can log in with their credentials or sign up for a new account.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Main View
+- Displays a list of all movies retrieved from the API.
+- Users can view detailed information about the director, genre, and synopsis of each movie.
+- The Navbar provides options to log out and navigate to the Profile View.
 
-## Running unit tests
+### Profile View
+- Shows the user's registration details.
+- Allows users to update their information (username, email, date of birth).
+- Provides an option for users to deregister from the application.
+- Displays the user's list of favorite movies, with the option to remove movies from this list.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup Instructions
+To set up the application locally, follow these steps:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Clone this repository.
+* Navigate to the myMovie-Angular-client folder and run `npm install`
+* Run `ng serve`, then navigate to  `http://localhost:4200/`
